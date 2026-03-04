@@ -1,0 +1,129 @@
+{
+  "data": {
+    "nodeTestimonials": {
+      "__typename": "NodeTestimonialConnection",
+      "nodes": [
+        {
+          "__typename": "NodeTestimonial",
+          "id": "testimonial-martinez",
+          "title": "Our Wedding Was a Floral Dream",
+          "path": "/testimonials/martinez-wedding",
+          "body": {
+            "processed": "<p>Petal & Stem absolutely exceeded our expectations for our October wedding. Sarah understood our vision of a moody, romantic garden aesthetic and brought it to life beyond anything we imagined. The ceremony arch was breathtaking and our guests are still talking about the centerpieces months later. Worth every penny.</p>",
+            "summary": "Petal & Stem absolutely exceeded our expectations for our October wedding. Sarah understood our vision of a moody, romantic garden aesthetic and brought it to life beyond anything we imagined. The cer"
+          },
+          "clientName": "Elena & Marco Martinez",
+          "clientLocation": "Portland, OR",
+          "rating": 5,
+          "occasionType": "Wedding",
+          "photo": {
+            "url": "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=800&q=80",
+            "alt": "Elena Martinez",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeTestimonial",
+          "id": "testimonial-brooks",
+          "title": "Weekly Flowers for Our Office",
+          "path": "/testimonials/brooks-subscription",
+          "body": {
+            "processed": "<p>We've had a weekly flower subscription with Petal & Stem for over two years now. They always bring fresh, seasonal arrangements that brighten our reception area. Our clients constantly comment on how beautiful the flowers are. The team is reliable, creative, and so easy to work with.</p>",
+            "summary": "We've had a weekly flower subscription with Petal & Stem for over two years now. They always bring fresh, seasonal arrangements that brighten our reception area. Our clients constantly comment on how "
+          },
+          "clientName": "Jennifer Brooks",
+          "clientLocation": "Lake Oswego, OR",
+          "rating": 5,
+          "occasionType": "Corporate Subscription",
+          "photo": {
+            "url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80",
+            "alt": "Jennifer Brooks",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeTestimonial",
+          "id": "testimonial-kim",
+          "title": "The Perfect Surprise",
+          "path": "/testimonials/kim-birthday",
+          "body": {
+            "processed": "<p>I ordered the Garden Romance arrangement for my wife's birthday and it was absolutely stunning. The flowers were incredibly fresh, the colors were gorgeous, and it arrived exactly on time. The delivery person even texted me a photo before dropping it off. So thoughtful! This is now my go-to florist for every occasion.</p>",
+            "summary": "I ordered the Garden Romance arrangement for my wife's birthday and it was absolutely stunning. The flowers were incredibly fresh, the colors were gorgeous, and it arrived exactly on time. The deliver"
+          },
+          "clientName": "Daniel Kim",
+          "clientLocation": "Beaverton, OR",
+          "rating": 5,
+          "occasionType": "Birthday Delivery",
+          "photo": {
+            "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+            "alt": "Daniel Kim",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

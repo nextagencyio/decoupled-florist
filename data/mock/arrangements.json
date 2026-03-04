@@ -1,0 +1,196 @@
+{
+  "data": {
+    "nodeArrangements": {
+      "__typename": "NodeArrangementConnection",
+      "nodes": [
+        {
+          "__typename": "NodeArrangement",
+          "id": "arrangement-garden-romance",
+          "title": "Garden Romance",
+          "path": "/arrangements/garden-romance",
+          "body": {
+            "processed": "<p>A lush, romantic arrangement overflowing with garden roses, peonies, and ranunculus in soft pinks and ivory. Accented with eucalyptus and dusty miller for a dreamy, organic feel. This bouquet is our most popular choice for anniversaries and romantic gestures.</p><p>Each arrangement is hand-tied and arrives in our signature glass vase with a personalized card.</p>",
+            "summary": "A lush, romantic arrangement overflowing with garden roses, peonies, and ranunculus in soft pinks and ivory. Accented with eucalyptus and dusty miller for a dreamy, organic feel. This bouquet is our m"
+          },
+          "price": "$95",
+          "flowerTypes": [
+            "Garden Roses",
+            "Peonies",
+            "Ranunculus",
+            "Eucalyptus",
+            "Dusty Miller"
+          ],
+          "arrangementSize": "Large",
+          "availability": "Year-round (peonies seasonal April-June)",
+          "bestFor": "Anniversaries, Romance, Valentines Day",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1487530811176-3780de880c2d?w=800&q=80",
+            "alt": "Romantic bouquet of pink garden roses and peonies",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1487530811176-3780de880c2d?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1487530811176-3780de880c2d?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1487530811176-3780de880c2d?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeArrangement",
+          "id": "arrangement-wild-meadow",
+          "title": "Wild Meadow",
+          "path": "/arrangements/wild-meadow",
+          "body": {
+            "processed": "<p>Inspired by Pacific Northwest wildflower meadows, this arrangement features a natural, unstructured mix of dahlias, cosmos, Queen Anne's lace, and chamomile. The effect is effortlessly beautiful, as if gathered from a sun-drenched field.</p><p>Perfect for adding a touch of natural charm to any room. Available in a rustic ceramic pot or wrapped in kraft paper for a hand-tied bouquet.</p>",
+            "summary": "Inspired by Pacific Northwest wildflower meadows, this arrangement features a natural, unstructured mix of dahlias, cosmos, Queen Anne's lace, and chamomile. The effect is effortlessly beautiful, as i"
+          },
+          "price": "$65",
+          "flowerTypes": [
+            "Dahlias",
+            "Cosmos",
+            "Queen Anne's Lace",
+            "Chamomile",
+            "Fern"
+          ],
+          "arrangementSize": "Medium",
+          "availability": "May through October",
+          "bestFor": "Birthdays, Thank You, Just Because",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80",
+            "alt": "Wild meadow-style bouquet with mixed flowers",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeArrangement",
+          "id": "arrangement-modern-luxe",
+          "title": "Modern Luxe",
+          "path": "/arrangements/modern-luxe",
+          "body": {
+            "processed": "<p>A striking contemporary arrangement featuring calla lilies, orchids, and anthuriums in a clean, architectural design. The monochromatic white palette with deep green foliage makes a sophisticated statement in any modern space.</p><p>Presented in a sleek matte ceramic vessel, this arrangement is ideal for corporate settings, luxury gifts, or minimalist interiors.</p>",
+            "summary": "A striking contemporary arrangement featuring calla lilies, orchids, and anthuriums in a clean, architectural design. The monochromatic white palette with deep green foliage makes a sophisticated stat"
+          },
+          "price": "$120",
+          "flowerTypes": [
+            "Calla Lilies",
+            "Phalaenopsis Orchids",
+            "Anthuriums",
+            "Monstera Leaves"
+          ],
+          "arrangementSize": "Large",
+          "availability": "Year-round",
+          "bestFor": "Corporate Gifts, Luxury, Modern Decor",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=800&q=80",
+            "alt": "Modern white floral arrangement with calla lilies",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeArrangement",
+          "id": "arrangement-sunshine-burst",
+          "title": "Sunshine Burst",
+          "path": "/arrangements/sunshine-burst",
+          "body": {
+            "processed": "<p>Brighten anyone's day with this cheerful explosion of sunflowers, yellow roses, orange gerbera daisies, and solidago. This vibrant arrangement radiates warmth and happiness, making it the perfect pick-me-up gift.</p><p>Arranged in a sunny yellow ceramic pot with a matching ribbon. Guaranteed to bring a smile!</p>",
+            "summary": "Brighten anyone's day with this cheerful explosion of sunflowers, yellow roses, orange gerbera daisies, and solidago. This vibrant arrangement radiates warmth and happiness, making it the perfect pick"
+          },
+          "price": "$55",
+          "flowerTypes": [
+            "Sunflowers",
+            "Yellow Roses",
+            "Gerbera Daisies",
+            "Solidago",
+            "Hypericum Berries"
+          ],
+          "arrangementSize": "Medium",
+          "availability": "Year-round",
+          "bestFor": "Get Well, Cheer Up, Birthday",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1508610048659-a06b669e3321?w=800&q=80",
+            "alt": "Bright sunflower and yellow rose arrangement",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1508610048659-a06b669e3321?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1508610048659-a06b669e3321?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1508610048659-a06b669e3321?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

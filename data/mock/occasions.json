@@ -1,0 +1,129 @@
+{
+  "data": {
+    "nodeOccasions": {
+      "__typename": "NodeOccasionConnection",
+      "nodes": [
+        {
+          "__typename": "NodeOccasion",
+          "id": "occasion-wedding",
+          "title": "Wedding Flowers",
+          "path": "/occasions/wedding-flowers",
+          "body": {
+            "processed": "<p>Your wedding flowers tell the story of your love. Our bridal specialists work closely with each couple to create floral designs that capture their vision, complement their venue, and stay within budget.</p><h2>What We Provide</h2><ul><li>Bridal and bridesmaid bouquets</li><li>Boutonnieres and corsages</li><li>Ceremony arch and altar arrangements</li><li>Centerpieces and table runners</li><li>Cake flowers and reception decor</li><li>Flower girl petals and aisle decor</li></ul><h2>Our Process</h2><p>Every wedding begins with a complimentary consultation where we discuss your vision, color palette, venue, and budget. We then create a detailed proposal with mood boards and pricing for your review.</p>",
+            "summary": "Your wedding flowers tell the story of your love. Our bridal specialists work closely with each couple to create floral designs that capture their vision, complement their venue, and stay within budge"
+          },
+          "summary": "Full-service wedding floral design from ceremony to reception.",
+          "startingPrice": "$2,500",
+          "leadTime": "3-6 months",
+          "consultationIncluded": true,
+          "image": {
+            "url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80",
+            "alt": "Beautiful wedding ceremony arch with flowers",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeOccasion",
+          "id": "occasion-corporate",
+          "title": "Corporate Events",
+          "path": "/occasions/corporate-events",
+          "body": {
+            "processed": "<p>Elevate your business events with professional floral design that reinforces your brand image. From weekly office arrangements to large-scale galas and product launches, we deliver polished, on-brand florals that impress clients and guests.</p><h2>Corporate Services</h2><ul><li>Weekly or monthly office arrangements</li><li>Conference and meeting room florals</li><li>Gala and fundraiser centerpieces</li><li>Product launch and grand opening displays</li><li>Holiday and seasonal office decor</li></ul>",
+            "summary": "Elevate your business events with professional floral design that reinforces your brand image. From weekly office arrangements to large-scale galas and product launches, we deliver polished, on-brand "
+          },
+          "summary": "Professional floral design for offices, galas, conferences, and launches.",
+          "startingPrice": "$500",
+          "leadTime": "1-2 weeks",
+          "consultationIncluded": true,
+          "image": {
+            "url": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80",
+            "alt": "Elegant floral centerpiece at a corporate event",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeOccasion",
+          "id": "occasion-sympathy",
+          "title": "Sympathy & Memorial",
+          "path": "/occasions/sympathy-memorial",
+          "body": {
+            "processed": "<p>During difficult times, flowers offer comfort and express what words cannot. Our sympathy arrangements are designed with care and reverence, using soft, elegant blooms that honor your loved one's memory.</p><h2>Sympathy Options</h2><ul><li>Standing sprays and wreaths</li><li>Casket sprays</li><li>Sympathy baskets and vases</li><li>Funeral service arrangements</li><li>Memorial tribute designs</li></ul><p>We coordinate directly with funeral homes for timely delivery and can work with families to create personalized tributes that reflect the life being celebrated.</p>",
+            "summary": "During difficult times, flowers offer comfort and express what words cannot. Our sympathy arrangements are designed with care and reverence, using soft, elegant blooms that honor your loved one's memo"
+          },
+          "summary": "Compassionate floral tributes for funerals, memorials, and condolence.",
+          "startingPrice": "$75",
+          "leadTime": "Same-day available",
+          "consultationIncluded": false,
+          "image": {
+            "url": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80",
+            "alt": "Peaceful white and soft pink sympathy arrangement",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

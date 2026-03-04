@@ -1,0 +1,318 @@
+{
+  "model": [
+    {
+      "bundle": "homepage",
+      "label": "Homepage",
+      "description": "Landing page with hero section, statistics, and call-to-action areas",
+      "fields": [
+        { "id": "hero_title", "label": "Hero Title", "type": "string" },
+        { "id": "hero_subtitle", "label": "Hero Subtitle", "type": "string" },
+        { "id": "hero_description", "label": "Hero Description", "type": "text" },
+        { "id": "stats_items", "label": "Statistics", "type": "paragraph(stat_item)[]" },
+        { "id": "featured_items_title", "label": "Featured Items Title", "type": "string" },
+        { "id": "cta_title", "label": "CTA Title", "type": "string" },
+        { "id": "cta_description", "label": "CTA Description", "type": "text" },
+        { "id": "cta_primary", "label": "Primary CTA", "type": "string" },
+        { "id": "cta_secondary", "label": "Secondary CTA", "type": "string" }
+      ]
+    },
+    {
+      "bundle": "arrangement",
+      "label": "Arrangement",
+      "description": "A floral arrangement or bouquet available for purchase",
+      "body": true,
+      "fields": [
+        { "id": "price", "label": "Price", "type": "string" },
+        { "id": "flower_types", "label": "Flower Types", "type": "string[]" },
+        { "id": "arrangement_size", "label": "Size", "type": "string" },
+        { "id": "availability", "label": "Availability", "type": "string" },
+        { "id": "best_for", "label": "Best For", "type": "string" },
+        { "id": "image", "label": "Arrangement Image", "type": "image" }
+      ]
+    },
+    {
+      "bundle": "occasion",
+      "label": "Occasion",
+      "description": "A special occasion or event type the florist serves",
+      "body": true,
+      "fields": [
+        { "id": "summary", "label": "Summary", "type": "string" },
+        { "id": "starting_price", "label": "Starting Price", "type": "string" },
+        { "id": "lead_time", "label": "Lead Time Required", "type": "string" },
+        { "id": "consultation_included", "label": "Consultation Included", "type": "bool" },
+        { "id": "image", "label": "Occasion Image", "type": "image" }
+      ]
+    },
+    {
+      "bundle": "testimonial",
+      "label": "Testimonial",
+      "description": "A customer testimonial and review",
+      "body": true,
+      "fields": [
+        { "id": "client_name", "label": "Client Name", "type": "string!" },
+        { "id": "client_location", "label": "Client Location", "type": "string" },
+        { "id": "rating", "label": "Rating", "type": "integer" },
+        { "id": "occasion_type", "label": "Occasion Type", "type": "string" },
+        { "id": "photo", "label": "Client Photo", "type": "image" }
+      ]
+    },
+    {
+      "bundle": "page",
+      "label": "Basic Page",
+      "description": "Static content pages for about, contact, policies, etc.",
+      "body": true,
+      "fields": []
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "stat_item",
+      "label": "Statistic Item",
+      "description": "A single statistic with number and label",
+      "fields": [
+        { "id": "number", "label": "Number", "type": "string!" },
+        { "id": "label", "label": "Label", "type": "string!" }
+      ]
+    }
+  ],
+  "content": [
+    {
+      "id": "stat-weddings",
+      "type": "paragraph.stat_item",
+      "values": { "number": "850+", "label": "Weddings Designed" }
+    },
+    {
+      "id": "stat-years",
+      "type": "paragraph.stat_item",
+      "values": { "number": "18", "label": "Years in Bloom" }
+    },
+    {
+      "id": "stat-deliveries",
+      "type": "paragraph.stat_item",
+      "values": { "number": "25,000+", "label": "Deliveries Made" }
+    },
+    {
+      "id": "stat-rating",
+      "type": "paragraph.stat_item",
+      "values": { "number": "4.9", "label": "Star Rating" }
+    },
+    {
+      "id": "homepage",
+      "type": "node.homepage",
+      "path": "/homepage",
+      "values": {
+        "title": "Petal & Stem Florist",
+        "hero_title": "Beautiful Blooms for Every Moment",
+        "hero_subtitle": "Artisan Floral Design in Portland Since 2008",
+        "hero_description": "<p>At Petal & Stem, we believe flowers have the power to transform any moment into a memory. Our award-winning designers create stunning arrangements using locally sourced, seasonal blooms that are as fresh as they are beautiful.</p>",
+        "stats_items": ["@stat-weddings", "@stat-years", "@stat-deliveries", "@stat-rating"],
+        "featured_items_title": "Signature Arrangements",
+        "cta_title": "Send Flowers Today",
+        "cta_description": "<p>From birthdays and anniversaries to sympathy and celebration, we have the perfect arrangement for every occasion. Same-day delivery available for orders placed before 1 PM.</p>",
+        "cta_primary": "Order Now",
+        "cta_secondary": "Book a Consultation"
+      }
+    },
+    {
+      "id": "arrangement-garden-romance",
+      "type": "node.arrangement",
+      "path": "/arrangements/garden-romance",
+      "values": {
+        "title": "Garden Romance",
+        "body": "<p>A lush, romantic arrangement overflowing with garden roses, peonies, and ranunculus in soft pinks and ivory. Accented with eucalyptus and dusty miller for a dreamy, organic feel. This bouquet is our most popular choice for anniversaries and romantic gestures.</p><p>Each arrangement is hand-tied and arrives in our signature glass vase with a personalized card.</p>",
+        "price": "$95",
+        "flower_types": ["Garden Roses", "Peonies", "Ranunculus", "Eucalyptus", "Dusty Miller"],
+        "arrangement_size": "Large",
+        "availability": "Year-round (peonies seasonal April-June)",
+        "best_for": "Anniversaries, Romance, Valentines Day",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1487530811176-3780de880c2d?w=800&q=80",
+          "alt": "Romantic bouquet of pink garden roses and peonies",
+          "title": "Garden Romance Arrangement"
+        }
+      }
+    },
+    {
+      "id": "arrangement-wild-meadow",
+      "type": "node.arrangement",
+      "path": "/arrangements/wild-meadow",
+      "values": {
+        "title": "Wild Meadow",
+        "body": "<p>Inspired by Pacific Northwest wildflower meadows, this arrangement features a natural, unstructured mix of dahlias, cosmos, Queen Anne's lace, and chamomile. The effect is effortlessly beautiful, as if gathered from a sun-drenched field.</p><p>Perfect for adding a touch of natural charm to any room. Available in a rustic ceramic pot or wrapped in kraft paper for a hand-tied bouquet.</p>",
+        "price": "$65",
+        "flower_types": ["Dahlias", "Cosmos", "Queen Anne's Lace", "Chamomile", "Fern"],
+        "arrangement_size": "Medium",
+        "availability": "May through October",
+        "best_for": "Birthdays, Thank You, Just Because",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80",
+          "alt": "Wild meadow-style bouquet with mixed flowers",
+          "title": "Wild Meadow Arrangement"
+        }
+      }
+    },
+    {
+      "id": "arrangement-modern-luxe",
+      "type": "node.arrangement",
+      "path": "/arrangements/modern-luxe",
+      "values": {
+        "title": "Modern Luxe",
+        "body": "<p>A striking contemporary arrangement featuring calla lilies, orchids, and anthuriums in a clean, architectural design. The monochromatic white palette with deep green foliage makes a sophisticated statement in any modern space.</p><p>Presented in a sleek matte ceramic vessel, this arrangement is ideal for corporate settings, luxury gifts, or minimalist interiors.</p>",
+        "price": "$120",
+        "flower_types": ["Calla Lilies", "Phalaenopsis Orchids", "Anthuriums", "Monstera Leaves"],
+        "arrangement_size": "Large",
+        "availability": "Year-round",
+        "best_for": "Corporate Gifts, Luxury, Modern Decor",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=800&q=80",
+          "alt": "Modern white floral arrangement with calla lilies",
+          "title": "Modern Luxe Arrangement"
+        }
+      }
+    },
+    {
+      "id": "arrangement-sunshine-burst",
+      "type": "node.arrangement",
+      "path": "/arrangements/sunshine-burst",
+      "values": {
+        "title": "Sunshine Burst",
+        "body": "<p>Brighten anyone's day with this cheerful explosion of sunflowers, yellow roses, orange gerbera daisies, and solidago. This vibrant arrangement radiates warmth and happiness, making it the perfect pick-me-up gift.</p><p>Arranged in a sunny yellow ceramic pot with a matching ribbon. Guaranteed to bring a smile!</p>",
+        "price": "$55",
+        "flower_types": ["Sunflowers", "Yellow Roses", "Gerbera Daisies", "Solidago", "Hypericum Berries"],
+        "arrangement_size": "Medium",
+        "availability": "Year-round",
+        "best_for": "Get Well, Cheer Up, Birthday",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1508610048659-a06b669e3321?w=800&q=80",
+          "alt": "Bright sunflower and yellow rose arrangement",
+          "title": "Sunshine Burst Arrangement"
+        }
+      }
+    },
+    {
+      "id": "occasion-wedding",
+      "type": "node.occasion",
+      "path": "/occasions/wedding-flowers",
+      "values": {
+        "title": "Wedding Flowers",
+        "body": "<p>Your wedding flowers tell the story of your love. Our bridal specialists work closely with each couple to create floral designs that capture their vision, complement their venue, and stay within budget.</p><h2>What We Provide</h2><ul><li>Bridal and bridesmaid bouquets</li><li>Boutonnieres and corsages</li><li>Ceremony arch and altar arrangements</li><li>Centerpieces and table runners</li><li>Cake flowers and reception decor</li><li>Flower girl petals and aisle decor</li></ul><h2>Our Process</h2><p>Every wedding begins with a complimentary consultation where we discuss your vision, color palette, venue, and budget. We then create a detailed proposal with mood boards and pricing for your review.</p>",
+        "summary": "Full-service wedding floral design from ceremony to reception.",
+        "starting_price": "$2,500",
+        "lead_time": "3-6 months",
+        "consultation_included": true,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80",
+          "alt": "Beautiful wedding ceremony arch with flowers",
+          "title": "Wedding Flowers"
+        }
+      }
+    },
+    {
+      "id": "occasion-corporate",
+      "type": "node.occasion",
+      "path": "/occasions/corporate-events",
+      "values": {
+        "title": "Corporate Events",
+        "body": "<p>Elevate your business events with professional floral design that reinforces your brand image. From weekly office arrangements to large-scale galas and product launches, we deliver polished, on-brand florals that impress clients and guests.</p><h2>Corporate Services</h2><ul><li>Weekly or monthly office arrangements</li><li>Conference and meeting room florals</li><li>Gala and fundraiser centerpieces</li><li>Product launch and grand opening displays</li><li>Holiday and seasonal office decor</li></ul>",
+        "summary": "Professional floral design for offices, galas, conferences, and launches.",
+        "starting_price": "$500",
+        "lead_time": "1-2 weeks",
+        "consultation_included": true,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80",
+          "alt": "Elegant floral centerpiece at a corporate event",
+          "title": "Corporate Event Flowers"
+        }
+      }
+    },
+    {
+      "id": "occasion-sympathy",
+      "type": "node.occasion",
+      "path": "/occasions/sympathy-memorial",
+      "values": {
+        "title": "Sympathy & Memorial",
+        "body": "<p>During difficult times, flowers offer comfort and express what words cannot. Our sympathy arrangements are designed with care and reverence, using soft, elegant blooms that honor your loved one's memory.</p><h2>Sympathy Options</h2><ul><li>Standing sprays and wreaths</li><li>Casket sprays</li><li>Sympathy baskets and vases</li><li>Funeral service arrangements</li><li>Memorial tribute designs</li></ul><p>We coordinate directly with funeral homes for timely delivery and can work with families to create personalized tributes that reflect the life being celebrated.</p>",
+        "summary": "Compassionate floral tributes for funerals, memorials, and condolence.",
+        "starting_price": "$75",
+        "lead_time": "Same-day available",
+        "consultation_included": false,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80",
+          "alt": "Peaceful white and soft pink sympathy arrangement",
+          "title": "Sympathy Flowers"
+        }
+      }
+    },
+    {
+      "id": "testimonial-martinez",
+      "type": "node.testimonial",
+      "path": "/testimonials/martinez-wedding",
+      "values": {
+        "title": "Our Wedding Was a Floral Dream",
+        "body": "<p>Petal & Stem absolutely exceeded our expectations for our October wedding. Sarah understood our vision of a moody, romantic garden aesthetic and brought it to life beyond anything we imagined. The ceremony arch was breathtaking and our guests are still talking about the centerpieces months later. Worth every penny.</p>",
+        "client_name": "Elena & Marco Martinez",
+        "client_location": "Portland, OR",
+        "rating": 5,
+        "occasion_type": "Wedding",
+        "photo": {
+          "uri": "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=800&q=80",
+          "alt": "Elena Martinez",
+          "title": "Elena Martinez"
+        }
+      }
+    },
+    {
+      "id": "testimonial-brooks",
+      "type": "node.testimonial",
+      "path": "/testimonials/brooks-subscription",
+      "values": {
+        "title": "Weekly Flowers for Our Office",
+        "body": "<p>We've had a weekly flower subscription with Petal & Stem for over two years now. They always bring fresh, seasonal arrangements that brighten our reception area. Our clients constantly comment on how beautiful the flowers are. The team is reliable, creative, and so easy to work with.</p>",
+        "client_name": "Jennifer Brooks",
+        "client_location": "Lake Oswego, OR",
+        "rating": 5,
+        "occasion_type": "Corporate Subscription",
+        "photo": {
+          "uri": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80",
+          "alt": "Jennifer Brooks",
+          "title": "Jennifer Brooks"
+        }
+      }
+    },
+    {
+      "id": "testimonial-kim",
+      "type": "node.testimonial",
+      "path": "/testimonials/kim-birthday",
+      "values": {
+        "title": "The Perfect Surprise",
+        "body": "<p>I ordered the Garden Romance arrangement for my wife's birthday and it was absolutely stunning. The flowers were incredibly fresh, the colors were gorgeous, and it arrived exactly on time. The delivery person even texted me a photo before dropping it off. So thoughtful! This is now my go-to florist for every occasion.</p>",
+        "client_name": "Daniel Kim",
+        "client_location": "Beaverton, OR",
+        "rating": 5,
+        "occasion_type": "Birthday Delivery",
+        "photo": {
+          "uri": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+          "alt": "Daniel Kim",
+          "title": "Daniel Kim"
+        }
+      }
+    },
+    {
+      "id": "about-page",
+      "type": "node.page",
+      "path": "/about",
+      "values": {
+        "title": "About Petal & Stem",
+        "body": "<p>Petal & Stem was founded in 2008 by Sarah Whitfield, a lifelong plant lover who left a career in graphic design to pursue her passion for floral artistry. What started as a farmers market flower stand has blossomed into Portland's most beloved florist, known for innovative designs and a commitment to local, seasonal blooms.</p><h2>Our Approach</h2><p>We source 80% of our flowers from Pacific Northwest farms within 100 miles of our studio. This means fresher flowers, a smaller carbon footprint, and support for our local farming community. When seasonal availability requires it, we partner with certified sustainable farms in California and South America.</p><h2>Our Studio</h2><p>Visit our design studio in the Pearl District to browse our daily selection, pick up a pre-made bouquet, or sit down with one of our designers to plan your event flowers. We also offer weekly floral design workshops for those who want to learn the art themselves.</p>"
+      }
+    },
+    {
+      "id": "contact-page",
+      "type": "node.page",
+      "path": "/contact",
+      "values": {
+        "title": "Contact Us",
+        "body": "<p>Whether you're planning a wedding, need a last-minute gift, or want to set up a corporate account, we're here to help. Walk-ins are always welcome at our Pearl District studio.</p><h2>Studio Hours</h2><p>Monday - Friday: 8:00 AM - 6:00 PM<br/>Saturday: 9:00 AM - 5:00 PM<br/>Sunday: 10:00 AM - 3:00 PM</p><h2>Location</h2><p>Petal & Stem<br/>428 NW 11th Avenue<br/>Portland, OR 97209</p><h2>Get in Touch</h2><p>Phone: (503) 555-0172<br/>Email: hello@petalandstem.com</p><h2>Delivery</h2><p>Same-day delivery available for orders placed before 1:00 PM. We deliver throughout the Portland metro area, including Beaverton, Lake Oswego, Tigard, and Milwaukie.</p>"
+      }
+    }
+  ]
+}

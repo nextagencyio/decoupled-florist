@@ -1,0 +1,59 @@
+{
+  "data": {
+    "nodeHomepages": {
+      "__typename": "NodeHomepageConnection",
+      "nodes": [
+        {
+          "__typename": "NodeHomepage",
+          "id": "homepage",
+          "title": "Petal & Stem Florist",
+          "path": "/homepage",
+          "heroTitle": "Beautiful Blooms for Every Moment",
+          "heroSubtitle": "Artisan Floral Design in Portland Since 2008",
+          "heroDescription": {
+            "processed": "<p>At Petal & Stem, we believe flowers have the power to transform any moment into a memory. Our award-winning designers create stunning arrangements using locally sourced, seasonal blooms that are as fresh as they are beautiful.</p>",
+            "summary": "At Petal & Stem, we believe flowers have the power to transform any moment into a memory. Our award-winning designers create stunning arrangements using locally sourced, seasonal blooms that are as fr"
+          },
+          "statsItems": [
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-weddings",
+              "title": "",
+              "number": "850+",
+              "label": "Weddings Designed"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-years",
+              "title": "",
+              "number": "18",
+              "label": "Years in Bloom"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-deliveries",
+              "title": "",
+              "number": "25,000+",
+              "label": "Deliveries Made"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-rating",
+              "title": "",
+              "number": "4.9",
+              "label": "Star Rating"
+            }
+          ],
+          "featuredItemsTitle": "Signature Arrangements",
+          "ctaTitle": "Send Flowers Today",
+          "ctaDescription": {
+            "processed": "<p>From birthdays and anniversaries to sympathy and celebration, we have the perfect arrangement for every occasion. Same-day delivery available for orders placed before 1 PM.</p>",
+            "summary": "From birthdays and anniversaries to sympathy and celebration, we have the perfect arrangement for every occasion. Same-day delivery available for orders placed before 1 PM."
+          },
+          "ctaPrimary": "Order Now",
+          "ctaSecondary": "Book a Consultation"
+        }
+      ]
+    }
+  }
+}
