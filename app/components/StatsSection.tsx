@@ -21,7 +21,7 @@ export default function StatsSection({ homepageContent }: StatsSectionProps) {
           {stats.map((stat: any, i: number) => (
             <div key={stat.id || i} className="flex flex-col items-center">
               <div className={`w-28 h-28 rounded-full border-4 flex items-center justify-center mb-4 ${bubbleColors[i % bubbleColors.length]}`}>
-                <span className="text-3xl md:text-4xl font-bold font-display">{stat.value || stat.statValue}</span>
+                <span className="text-3xl md:text-4xl font-bold font-display">{stat.value || stat.statValue || stat.number}</span>
               </div>
               <div className="text-gray-700 font-semibold text-sm">{stat.label || stat.statLabel || stat.title}</div>
             </div>
