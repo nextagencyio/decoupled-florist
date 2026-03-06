@@ -19,28 +19,28 @@
               "__typename": "ParagraphStatItem",
               "id": "stat-weddings",
               "title": "",
-              "number": "850+",
+              "number": "850+", "value": "850+",
               "label": "Weddings Designed"
             },
             {
               "__typename": "ParagraphStatItem",
               "id": "stat-years",
               "title": "",
-              "number": "18",
+              "number": "18", "value": "18",
               "label": "Years in Bloom"
             },
             {
               "__typename": "ParagraphStatItem",
               "id": "stat-deliveries",
               "title": "",
-              "number": "25k+",
+              "number": "25k+", "value": "25k+",
               "label": "Deliveries Made"
             },
             {
               "__typename": "ParagraphStatItem",
               "id": "stat-rating",
               "title": "",
-              "number": "4.9",
+              "number": "4.9", "value": "4.9",
               "label": "Star Rating"
             }
           ],
