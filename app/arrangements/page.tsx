@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 async function getArrangements() {
   try {
     const client = getClient()
-    const { data } = await client.raw(GET_ARRANGEMENTS, { first: 50 })
+    const data = await client.raw(GET_ARRANGEMENTS, { first: 50 })
     return data?.nodeArrangements?.nodes || []
   } catch (error) {
     console.error('Error fetching arrangements:', error)
@@ -55,7 +55,7 @@ export default async function ArrangementsPage() {
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {items.map((item) => (
+              {items.map((item: any) => (
                 <ArrangementCard key={item.id} item={item} />
               ))}
             </div>

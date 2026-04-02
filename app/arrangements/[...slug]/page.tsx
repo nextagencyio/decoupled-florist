@@ -24,7 +24,7 @@ interface ArrangementByPathData {
 async function getArrangement(path: string): Promise<DrupalArrangement | null> {
   try {
     const client = getClient()
-    const { data } = await client.raw(GET_ARRANGEMENT_BY_PATH, { path })
+    const data = await client.raw(GET_ARRANGEMENT_BY_PATH, { path })
     return data?.route?.entity || null
   } catch (error) {
     console.error('Error fetching arrangement:', error)
