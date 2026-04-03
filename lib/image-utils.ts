@@ -34,8 +34,8 @@ export function getImageUrl(
   if (context === 'hero' && preferredSize === 'LARGE') {
     const largeVariation = image.variations?.find(v => v.name === 'LARGE')
     
-    // If LARGE variation is adequate (at least 1200px for retina), use it
-    if (largeVariation && largeVariation.width && largeVariation.width >= 1200) {
+    // If LARGE variation exists, use it (GraphQL schema doesn't expose variation dimensions)
+    if (largeVariation) {
       return proxyDrupalUrl(largeVariation.url)
     }
     
@@ -64,12 +64,7 @@ export function getImageDimensions(
   
   // Try to find the preferred size variation
   const preferredVariation = image.variations?.find(v => v.name === preferredSize)
-  if (preferredVariation) {
-    return {
-      width: preferredVariation.width,
-      height: preferredVariation.height
-    }
-  }
+  // GraphQL schema doesn't expose variation dimensions, skip variation lookup
   
   // Fallback to original image dimensions
   if (image.width && image.height) {
@@ -90,9 +85,11 @@ export function generateSrcSet(image: DrupalImage | null | undefined): string {
   
   const srcSetEntries: string[] = []
   
-  // Add variations to srcSet
+  // Add variations to srcSet (no width info from GraphQL, use name-based estimates)
+  const sizeEstimates: Record<string, number> = { THUMBNAIL: 100, MEDIUM: 220, LARGE: 480, WIDE: 1200 }
   image.variations.forEach(variation => {
-    srcSetEntries.push(`${proxyDrupalUrl(variation.url)} ${variation.width}w`)
+    const estimatedWidth = sizeEstimates[variation.name] || 400
+    srcSetEntries.push(`${proxyDrupalUrl(variation.url)} ${estimatedWidth}w`)
   })
   
   // Add original image as largest option

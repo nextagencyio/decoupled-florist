@@ -2,7 +2,7 @@ import { getClient } from '@/lib/drupal-client'
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { GET_ARRANGEMENT_BY_PATH } from '@/lib/queries'
+import { GET_NODE_BY_PATH } from '@/lib/queries'
 import { DrupalArrangement } from '@/lib/types'
 import Header from '../../components/Header'
 import ResponsiveImage from '../../components/ResponsiveImage'
@@ -24,7 +24,7 @@ interface ArrangementByPathData {
 async function getArrangement(path: string): Promise<DrupalArrangement | null> {
   try {
     const client = getClient()
-    const data = await client.raw(GET_ARRANGEMENT_BY_PATH, { path })
+    const data = await client.raw(GET_NODE_BY_PATH, { path })
     return data?.route?.entity || null
   } catch (error) {
     console.error('Error fetching arrangement:', error)

@@ -3,8 +3,8 @@ import Image from 'next/image'
 interface ImageVariation {
   name: string
   url: string
-  width: number
-  height: number
+  width?: number
+  height?: number
 }
 
 interface ResponsiveImageProps {
@@ -44,7 +44,7 @@ export default function ResponsiveImage({
   // Try to find a variation matching the target width
   let displayUrl = imageUrl
   if (targetWidth && imageVariations) {
-    const match = imageVariations.find(v => v.width >= targetWidth)
+    const match = imageVariations.find(v => (v.width || 0) >= targetWidth)
     if (match) displayUrl = match.url
   }
 

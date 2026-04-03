@@ -1,78 +1,6 @@
 // Tagged template that returns the query string
 const gql = (strings: TemplateStringsArray, ...values: any[]) => strings.reduce((a, s, i) => a + s + (values[i] || ''), '')
 
-export const GET_ARTICLE_TEASERS = gql`
-  query GetArticleTeasers($first: Int = 10) {
-    nodeArticles(first: $first, sortKey: CREATED_AT) {
-      nodes {
-        id
-        title
-        path
-        created {
-          timestamp
-        }
-        changed {
-          timestamp
-        }
-        ... on NodeArticle {
-          body {
-            processed
-            summary
-          }
-          image {
-            url
-            alt
-            width
-            height
-            variations(styles: [LARGE, MEDIUM, THUMBNAIL]) {
-              name
-              url
-              width
-              height
-            }
-          }
-        }
-      }
-    }
-  }
-`
-
-export const GET_ARTICLE_BY_PATH = gql`
-  query GetArticleByPath($path: String!) {
-    route(path: $path) {
-      ... on RouteInternal {
-        entity {
-          ... on NodeArticle {
-            id
-            title
-            body {
-              processed
-            }
-            created {
-              timestamp
-            }
-            changed {
-              timestamp
-            }
-            image {
-              url
-              alt
-              width
-              height
-              variations(styles: [LARGE, MEDIUM, THUMBNAIL]) {
-                name
-                url
-                width
-                height
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
-
 export const GET_HOMEPAGE_DATA = gql`
   query GetHomepageData {
     nodeHomepages(first: 1) {
@@ -82,11 +10,11 @@ export const GET_HOMEPAGE_DATA = gql`
         path
         heroTitle
         heroSubtitle
-        heroDescription { processed summary }
-        statsItems { ... on ParagraphStatItem { id title description { processed } icon } }
+        heroDescription { processed }
+        statsItems { ... on ParagraphStatItem { id number label } }
         featuredItemsTitle
         ctaTitle
-        ctaDescription { processed summary }
+        ctaDescription { processed }
         ctaPrimary
         ctaSecondary
       }
@@ -100,61 +28,59 @@ export const GET_NODE_BY_PATH = gql`
       ... on RouteInternal {
         entity {
           ... on NodePage {
+            __typename
             id
             title
-            body {
-              processed
-            }
+            body { processed }
           }
-          ... on NodeArticle {
+          ... on NodeArrangement {
+            __typename
             id
             title
-            body {
-              processed
-            }
-            created {
-              timestamp
-            }
-            changed {
-              timestamp
-            }
-            image {
-              url
-              alt
-              width
-              height
-              variations(styles: [LARGE, MEDIUM, THUMBNAIL]) {
-                name
-                url
-                width
-                height
-              }
-            }
+            path
+            body { processed summary }
+            price
+            flowerTypes
+            arrangementSize
+            availability
+            bestFor
+            image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url } }
+          }
+          ... on NodeOccasion {
+            __typename
+            id
+            title
+            path
+            body { processed summary }
+            summary
+            startingPrice
+            leadTime
+            consultationIncluded
+            image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url } }
+          }
+          ... on NodeTestimonial {
+            __typename
+            id
+            title
+            path
+            body { processed summary }
+            clientName
+            clientLocation
+            rating
+            occasionType
+            photo { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url } }
           }
           ... on NodeHomepage {
+            __typename
             id
             title
             heroTitle
             heroSubtitle
-            heroDescription {
-              processed
-            }
-            featuresTitle
-            featuresSubtitle
-            featuresItems {
-              ... on ParagraphFeatureItem {
-                id
-                title
-                description {
-                  processed
-                }
-                icon
-              }
-            }
+            heroDescription { processed }
+            statsItems { ... on ParagraphStatItem { id number label } }
+            featuredItemsTitle
             ctaTitle
-            ctaDescription {
-              processed
-            }
+            ctaDescription { processed }
             ctaPrimary
             ctaSecondary
           }
@@ -179,30 +105,7 @@ export const GET_ARRANGEMENTS = gql`
           arrangementSize
           availability
           bestFor
-          image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
-        }
-      }
-    }
-  }
-`
-
-export const GET_ARRANGEMENT_BY_PATH = gql`
-  query GetArrangementByPath($path: String!) {
-    route(path: $path) {
-      ... on RouteInternal {
-        entity {
-          ... on NodeArrangement {
-            id
-            title
-            path
-          body { processed summary }
-          price
-          flowerTypes
-          arrangementSize
-          availability
-          bestFor
-          image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
-          }
+          image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url } }
         }
       }
     }
@@ -223,29 +126,7 @@ export const GET_OCCASIONS = gql`
           startingPrice
           leadTime
           consultationIncluded
-          image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
-        }
-      }
-    }
-  }
-`
-
-export const GET_OCCASION_BY_PATH = gql`
-  query GetOccasionByPath($path: String!) {
-    route(path: $path) {
-      ... on RouteInternal {
-        entity {
-          ... on NodeOccasion {
-            id
-            title
-            path
-          body { processed summary }
-          summary
-          startingPrice
-          leadTime
-          consultationIncluded
-          image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
-          }
+          image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url } }
         }
       }
     }
@@ -266,29 +147,7 @@ export const GET_TESTIMONIALS = gql`
           clientLocation
           rating
           occasionType
-          photo { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
-        }
-      }
-    }
-  }
-`
-
-export const GET_TESTIMONIAL_BY_PATH = gql`
-  query GetTestimonialByPath($path: String!) {
-    route(path: $path) {
-      ... on RouteInternal {
-        entity {
-          ... on NodeTestimonial {
-            id
-            title
-            path
-          body { processed summary }
-          clientName
-          clientLocation
-          rating
-          occasionType
-          photo { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
-          }
+          photo { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url } }
         }
       }
     }
